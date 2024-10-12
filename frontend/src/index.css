@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg{
+  @apply bg-slate-50  text-gray-900   dark:border-violet-700 shadow-sm rounded-lg dark:shadow-red-500 dark:bg-[#0d0417] dark:text-white ;
+}
+.skelet{
+  @apply bg-violet-400 shadow-sm  dark:shadow-red-500 dark:bg-[#0d0417]  rounded-3xl p-1
+}
+
+body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(38, 2, 66);
+}
+::-webkit-scrollbar-thumb{
+  height: 10px !important;
+  background-color: rgb(107, 26, 177);
+}
+
+
+.divmenu .active {
+  color: rgb(254, 134, 5);
+  background: rgba(74, 9, 114, 0.822);
+}
+.linkitemmenu{
+  @apply w-[90%]    mx-auto py-2 flex gap-3 justify-end items-center rounded-xl hover:bg-violet-200  dark:hover:bg-violet-950 ;
+}
+
+.link_menu{
+  @apply scale-95 hover:scale-105  w-[65px] bg-violet-200  hover:bg-violet-300 dark:bg-violet-950 dark:hover:bg-violet-900 shadow  h-[65px] flex flex-col items-center justify-center mask mask-hexagon
+}
+
+.menu .active{
+  background-color: rgba(88, 7, 31, 0.916);
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 2px 5px rgba(42, 3, 93, 0.598) ;
+}
+
+.text-shortscomponent:hover .btn {
+  display: block;
+}
+
+.divs:hover .div-video::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  /* background: rgba(4, 1, 44, 0.779); */
+  background: linear-gradient(
+    to top,
+    rgba(21, 3, 58, 0.546) 30%,
+    rgba(46, 38, 99, 0) 100%
+  );
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 25px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.swiper-button-prev::after {
+  width: 30px;
+  height: 38px;
+}
+.swiper-button-next::after {
+  width: 30px;
+  height: 38px;
+}
+.swiper-slide {
+  width: min-content !important;
+}
+
+.swiper-wrapper {
+  transform: translate3d(0px, 0px, 0px, 0px) !important;
+}
+
+.slider-name .active {
+  background: rgb(42, 41, 41);
+  color: rgb(255, 255, 255);
+}
+
+.children {
+  display: none;
+}
+.father:hover .children {
+  display: block;
+}
+.child {
+  display: none;
+}
+.father:hover .child {
+  display: flex;
+}
+
+.shareshortspage::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+.widthscroll::-webkit-scrollbar {
+  width: 5px;
+  background: #cbb7d9;
+}
+
+.widthscroll::-webkit-scrollbar-thumb {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+  background: #440367;
+}
+
+.shadow-tst {
+  border-radius: 61px;
+  background: linear-gradient(145deg, #9c73c5, #b989ea);
+  box-shadow: 24px 24px 48px #513c67, -24px -24px 48px #ffc4ff;
+}
+
+.vid {
+  width: 350px !important;
+  height: 100% !important;
+}
+
+.minivideo {
+}
+
+.fullScreen {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: calc(100% - var(--previw-progress) * 100%);
+  background-color: rgb(150, 150, 150);
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: calc(100% - var(--progress-position) * 100%);
+  background-color: red;
+}
+
+.timeline .thumb-indicator {
+  --scale: 0;
+  position: absolute;
+  height: 200%;
+  top: -50%;
+  transform: translateX(-50%) scale(var(--scale));
+  left: calc(var(--progress-position) * 100%);
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 150ms ease-in-out;
+  aspect-ratio: 1/1;
+}
+
+.timeline .preview-img {
+  position: absolute;
+  height: 80px;
+  aspect-ratio: 16/9;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  left: calc(var(--progress-position) * 100%);
+  border-radius: 20px;
+  border: 2px solid wheat;
+  display: none;
+}
+.thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.video.scrubbing .thumbnail-img {
+  display: block;
+}
+.timeline-container:hover .preview-img {
+  display: block;
+}
+.timeline-container:hover .thumb-indicator {
+  --scale: 1;
+}
+.timeline-container:hover .timeline {
+  height: 100%;
+}
+
+.tt{
+  z-index: 5 !important;
+}
+.imp{
+  z-index: 50 !important;
+}
